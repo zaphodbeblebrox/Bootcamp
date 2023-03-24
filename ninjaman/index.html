@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title>NinjaMan</title>
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+                background-color: black;
+            }
+            .row{
+                line-height: 0;
+            }
+            .wall {
+                background-color: rgb(109, 103, 103);
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            .blank {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            .sushi {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('images/sushi.png');
+                background-size: contain;
+            }
+            .onigiri {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('images/onigiri.png');
+                background-size: contain;
+            }
+            .ninjaman {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('images/ninja.gif');
+                background-size: contain;
+            }
+            /* #ninjaman {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('images/ninja.gif');
+                background-size: contain;
+                position: absolute;
+                left: 40px;
+                top: 40px;
+            } */
+        </style>
+    </head>
+    <body>
+        <div id='world'></div>
+        <script type="text/javascript">
+                var maxsize = 10;
+                var food_chance = .30;
+                var sushi_count = 0, onigiri_count = 0;
+                var wall = 0, blank = 1, sushi = 2, ninjaman = 3, onigiri = 4;
+                var map_dict = {
+                    0: "wall",
+                    1: "blank",
+                    2: "sushi",
+                    3: "ninjaman",
+                    4: "onigiri"
+                }
+                var map = Array(maxsize).fill().map(() => Array(maxsize));
+                var ninja_pos = [1,1];
+                console.log(map);
+                // Initialize Map Array
+                for(var i = 0; i<maxsize; i++){
+                    for(var j = 0; j<maxsize; j++){
+                        map[i][j] = wall;
+                    }
+                }
+                console.log(map);
+                // Generate Pathing
+                for(var i = 1; i<maxsize-1; i++){
+                    for(var j = 1; j<maxsize-1; j++){
+                        if(i == 1 && j == 1){
+                            map[i][j] = sushi;
+                        }
+                        else if(i == 1 && (map[i][j-1] == sushi || map[i][j-1] == onigiri)){
+                            if(Math.random()>.2){
+                                map[i][j] = (Math.random()>0.5) ? sushi : onigiri;
+                            }
+                        }
+                        else if((map[i-1][j] == sushi || map[i-1][j] == onigiri) || (map[i][j-1] == sushi || map[i][j-1] == onigiri)){
+                            if(Math.random()>food_chance){
+                                map[i][j] = (Math.random()>0.5) ? sushi : onigiri;
+                            }
+                        }
+                    }
+                }
+                console.log(map);
+                // Insert Ninjaman
+                map[ninja_pos[0]][ninja_pos[1]] = ninjaman;
+                draw_world();
+                
+                // Move ninjaman
+                document.onkeydown = function(e){
+                    if(e.keyCode == 38 && map[ninja_pos[0]-1][ninja_pos[1]] != wall) { // UP
+                        map[ninja_pos[0]][ninja_pos[1]] = blank;
+                        ninja_pos[0]--;
+                        food_counter(map[ninja_pos[0]][ninja_pos[1]]);
+                        map[ninja_pos[0]][ninja_pos[1]] = ninjaman;
+                    }
+                    if(e.keyCode == 37 && map[ninja_pos[0]][ninja_pos[1]-1] != wall) { // LEFT
+                        map[ninja_pos[0]][ninja_pos[1]] = blank;
+                        ninja_pos[1]--;
+                        food_counter(map[ninja_pos[0]][ninja_pos[1]]);
+                        map[ninja_pos[0]][ninja_pos[1]] = ninjaman;
+                    }
+                    else if (e.keyCode == 39 && map[ninja_pos[0]][ninja_pos[1]+1] != wall) { // RIGHT
+                        map[ninja_pos[0]][ninja_pos[1]] = blank;
+                        ninja_pos[1]++;
+                        food_counter(map[ninja_pos[0]][ninja_pos[1]]);
+                        map[ninja_pos[0]][ninja_pos[1]] = ninjaman; 
+                    }
+                    else if (e.keyCode == 40 && map[ninja_pos[0]+1][ninja_pos[1]] != wall) { // DOWN
+                        map[ninja_pos[0]][ninja_pos[1]] = blank;
+                        ninja_pos[0]++;
+                        food_counter(map[ninja_pos[0]][ninja_pos[1]]);
+                        map[ninja_pos[0]][ninja_pos[1]] = ninjaman;
+                    }
+                    draw_world();
+                }
+
+                function food_counter(space2check){
+                    switch (space2check){
+                        case onigiri:
+                            onigiri_count++;
+                            console.log("Sushi Count: " + sushi_count);
+                            console.log("Onigiri Count: " + onigiri_count);
+                            break;
+                        case sushi:
+                            sushi_count++;
+                            console.log("Sushi Count: " + sushi_count);
+                            console.log("Onigiri Count: " + onigiri_count);
+                        default:
+                            break;
+                    }
+                }
+                
+                function draw_world(){
+                    output = "";
+                    for(var row=0; row<map.length; row++){
+                        output += "<div class = 'row'>"
+                        for(var col=0; col<map[row].length; col++){
+                            output += "<div class="+map_dict[map[row][col]]+"></div>";
+                        }
+                        output += "</div>"
+                    }
+                    document.getElementById('world').innerHTML = output;
+                }
+        </script>
+    
+    </body>
+</html>

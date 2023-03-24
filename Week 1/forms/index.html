@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+    </head>
+    <body>
+		<h1>Registration Form</h1>
+		<form>
+			<div>
+				First Name: * 
+				<input type="text" name="first_name">
+			</div>
+			<div>
+				Last Name: * 
+				<input type="text" name="last_name">
+			</div>
+			<div>
+				Email Address: * 
+				<input type="text" name="email">
+			</div>
+			<div>
+				Password: * 
+				<input type="password" name="password">
+			</div>
+			<div>
+				Confirm Password: * 
+				<input type="password" name="confirm_password">
+			</div>
+			<div>
+				Birthday: 
+				<input type="date" name="bday">
+			</div>
+			<div>
+				<p>Gender Identity:</p> 
+				<input type="radio" name="gender" value = "male">
+				<label for="male">Male</label>
+				<input type="radio" name="gender" value = "female">
+				<label for="female">Female</label>
+				<input type="radio" name="gender" value = "non_binary">
+				<label for="non_binary">Non-binary</label>
+				<input type="radio" name="gender" value = "no_ans">
+				<label for="no_ans">I perfer not to answer</label>
+			</div>
+			<div>
+				<p>A short descripton about myself:</p>  
+				<textarea></textarea>
+			</div>
+			<div>
+				Favorite Language: 
+				<select name="language">
+					<option>JavaScript</option>
+					<option>Python</option>
+					<option>Java</option>
+					<option>Ruby</option>
+					<option>C/C++</option>
+				</select>
+			</div>
+			<div>
+				<input type="checkbox" name="updates" id="updates">
+				<label for="updates">Yes, I would like to receive periodic email updates</label>
+			</div>
+			<div>
+				<input type="submit" value="create_account">
+			</div>
+			<div>
+				* Indicates a required field
+			</div>
+
+		</form>
+        
+    </body>
+</html>

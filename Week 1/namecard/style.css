@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.profile{
+    width: 100%;
+    background-color: white;
+    border: 3px solid gray;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.header_bar{
+    background-color: teal;
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.body_bar {
+    padding: 20px;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    background-color: white;
+    height: 100px;
+    padding: 5px;
+    margin: 10px 20px;
+    position: fixed;
+    top:10px;
+
+}
+
+#setting {
+    height: 15px;
+    width: 15px;
+}
+
+#location-icon {
+    width: 10px;
+    height: 15px;
+}

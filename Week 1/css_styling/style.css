@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    background-color: black;
+    color: white;
+    font-family: cursive;
+}
+span{
+    color: skyblue;
+}
+
+h2 {
+    background-color: purple;
+    color: white;
+    font-style: italic;
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+    background-color: skyblue;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Don't worry about knowing what all of these properties are yet */
+/* we'll come back to them later, we promise! */

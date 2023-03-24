@@ -1,0 +1,69 @@
+@import url('css-lib.css');
+
+.navbar{
+    justify-content: flex-start;
+}
+
+button{
+    background-color: gold;
+    padding: 2px 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.user{
+    flex: 1;
+}
+
+.user-likes{
+    width: 100%;
+    font-weight: bold;
+    font-size: large;
+    justify-content: space-between;
+}
+
+.likes{
+    color: black;
+    font-weight: bold;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.user-box{
+    width: 425px;
+    height: 125px;
+    padding: 10px;
+    border: 3px solid black;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 20px 0px 20px 0px;
+}
+
+.text{
+    font-size: large;
+}
+
+.content{
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.feed{
+    justify-content: space-around;
+}
+
+.sidebar{
+    width: 125px;
+    height: 200px;
+    border: 3px solid black;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.user-image{
+    width: 75px;
+    height: 75px;
+}

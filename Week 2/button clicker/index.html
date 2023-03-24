@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Dojonary</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container flex-col">
+            <!-- Nav/Header Bar -->
+            <div class="navbar">
+                <h1>Dojonary</h1>
+                <input type="text" size="30" placeholder="Search...">
+                <button class="btn" onclick="login(this)" id="login_button">Login</button>
+            </div>
+            <!-- Core Content -->
+            <div class="content flex-row">
+                <div class="definitions flex-col">
+                    <div class="def-box flex-row">
+                        <div class="info-left flex-column">
+                            <h3>ninja</h3>
+                            <p class="classification">noun</p>
+                            <p class="plural">Plural: <i>ninjas</i></p>
+                            <button class="likes btn" onclick="alert('Ninja was liked')">13 likes</button>
+                        </div>
+                        <div class="info-right flex-row">
+                            <p>A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                        </div>
+                    </div>
+                    <div class="def-box flex-row">
+                        <div class="info-left flex-column">
+                            <h3>ninja</h3>
+                            <p class="classification">noun</p>
+                            <p class="plural">Plural: <i>ninjas</i></p>
+                            <button class="likes btn" onclick="alert('Ninja was liked')">37 likes</button>
+                        </div>
+                        <div class="info-right flex-row">
+                            <p>A <a href="#">Programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="add_definition flex-col">
+                    <h3>Dojonary is defined by <b>YOU</b></h3>
+                    <button class="add-def btn" onclick="hideButton(this)">Add Definition</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

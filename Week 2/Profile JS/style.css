@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.root{
+    height: 100%;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin: 0 auto; */
+}
+
+/* 1: Nav-Bar */
+.navbar{
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.signout button {
+    background-color: teal;
+    border: 0;
+    border-color: black;
+    color: azure;
+    padding: 3px 10px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+li {
+    margin: 10px;
+}
+
+.navbar h1{
+    color: white;
+    margin: 10px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+/* ------------- 1: Nav-Bar */
+/* 1: Main Content */
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* 2: Core Content Feed */
+.feed{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+/* 3: Namecard */
+.namecard{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin: 0 auto; */
+}
+
+.profile{
+    width: 100%;
+    background-color: white;
+    border: 3px solid gray;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.header_bar{
+    background-color: teal;
+    height: 75px;
+    margin-bottom: 20px;
+}
+
+.body_bar {
+    padding: 20px;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    background-color: white;
+    height: 100px;
+    padding: 5px;
+    margin: 10px 20px;
+    position: fixed;
+    top: 90px;
+}
+
+#setting {
+    height: 15px;
+    width: 15px;
+}
+
+#location-icon {
+    width: 10px;
+    height: 15px;
+}
+/* ------------- 3: Namecard */
+/* 3: Education */
+.education{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* margin: 0 auto; */
+}
+
+#education{
+    justify-content: flex-start;
+}
+.dates{
+    color: gray;
+}
+p {
+    margin: 3px;
+}
+/* ------------- 3: Education */
+/* ------------- 2: Core Content Feed */
+
+/* 2: Sidebar */
+/* 3: Connection Requests */
+.requests{
+    width: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0px;
+}
+
+.generic_header{
+    background-color: rgb(51, 51, 51);
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.num_req{
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-weight: bold;
+    border: 3px solid gray;
+    padding: 0px 5px;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
+
+.user-pic, .accept, .reject{
+    width: 30px;
+    height: 30px;
+    margin: 5px 10px;
+}
+
+.accept, .reject{
+    margin: 5px 5px;
+}
+
+.sidebar .body_bar{
+    padding: 0;
+}
+
+.req-person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.selection{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.view_more{
+    padding: 10px;
+    border-top: 3px solid gray;
+}
+/* ------------- 2: Sidebar */

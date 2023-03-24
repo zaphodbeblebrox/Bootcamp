@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Likes</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar">
+                <h1>Network</h1>
+            </div>
+            <!-- Core Content -->
+            <div class="root-content flex-column">
+                <h1>Your feed</h1>
+                <div class="content flex-row">
+                    <!-- Sidebar -->
+                    <div class="sidebar flex-column">
+                        <img src="icons/user-circle.png" alt="user icon" class="user-image">
+                        <a href="#">Add an avatar</a>
+                        <h2>James Doe</h2>
+                    </div>
+                    <!-- Main Feed -->
+                    <div class="feed">
+                        <!-- Neil -->
+                        <div class="user-box flex-column">
+                            <div class="user-likes flex-row">
+                                <div class="user">
+                                    <h2>Neil M</h2>
+                                </div>
+                                <div class="likes flex-row">
+                                    <div class="like-label flex-row">
+                                        <p id="neilM-likes">9</p>
+                                        <p>&nbsp;like(s)</p>
+                                    </div>
+                                    <button onclick="incrementLikes('#neilM-likes')">Like</button>
+                                </div>
+                            </div>
+                            <p class="text">I just set up this new discord bot, let me know what you 
+                                all think. <a href="#">link</a></p>
+                        </div>
+                        <!-- Nichole -->
+                        <div class="user-box flex-column">
+                            <div class="user-likes flex-row">
+                                <div class="user">
+                                    <h2>Nichole K</h2>
+                                </div>
+                                <div class="likes flex-row">
+                                    <div class="like-label flex-row">
+                                        <p id="nicholeK-likes">12</p>
+                                        <p>&nbsp;like(s)</p>
+                                    </div>
+                                    <button onclick="incrementLikes('#nicholeK-likes')">Like</button>
+                                </div>
+                            </div>
+                            <p class="text">Just finished my <a href="#">next comic</a>, check it out.</p>
+                        </div>
+                        <!-- Jim -->
+                        <div class="user-box flex-column">
+                            <div class="user-likes flex-row">
+                                <div class="user">
+                                    <h2>Jim R</h2>
+                                </div>
+                                <div class="likes flex-row">
+                                    <div class="like-label flex-row">
+                                        <p id="jimR-likes">9</p>
+                                        <p>&nbsp;like(s)</p>
+                                    </div>
+                                    <button onclick="incrementLikes('#jimR-likes')">Like</button>
+                                </div>
+                            </div>
+                            <p class="text">I can't stop listening to the <a href="#">new album</a>.
+                            Who else is liking it?</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

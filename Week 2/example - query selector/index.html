@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Profile</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container flex-col">
+            <!-- Nav/Header Bar -->
+            <div class="navbar">
+                <div class ="nav-links">
+                    <h1>Exercise</h1>
+                    <ul>
+                        <li>Link 1</li>
+                        <li>Link 2</li>
+                        <li>Link 3</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Core Content -->
+            <div class="content flex-row">
+                <div class="col-left flex-col">
+                    <div class="boxes">
+                        <div class="label">First box</div>
+                        <div class="circle-container flex-row">
+                            <div class="circle"></div>
+                            <div class="circle" onclick="changeColor(this, 'green')"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class="label">Second box</div>
+                        <div class="circle-container flex-row">
+                            <div class="circle"></div>
+                            <div class="circle" onclick="changeColor(this, 'pink')"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-right flex-col">
+                    <div class="boxes">
+                        <div class="label">Third box</div>
+                        <div class="circle-container flex-row">
+                            <div class="circle"></div>
+                            <div class="circle" onclick="changeColor(this, 'blue')"></div>
+                            <div class="circle" onclick="changeColor(this, 'black')"></div>
+                        </div>
+                    </div>
+                    <div class="boxes">
+                        <div class="label">Forth box</div>
+                        <div class="circle-container flex-row">
+                            <div class="circle"></div>
+                            <div class="circle" onclick="changeColor(this, 'white')"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

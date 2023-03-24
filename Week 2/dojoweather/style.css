@@ -1,0 +1,107 @@
+@import url('css-lib.css');
+
+.container{
+    margin:0 auto;
+    /* background-color: aquamarine; */
+    height: 500px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+.content{
+    width: 650px;
+    height: 100%;
+    /* background-color: lightcoral; */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar{
+    background-color: dodgerblue;
+    /* justify-content: flex-start; */
+}
+
+.city-info{
+    /* background-color: purple; */
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding: 10px;
+}
+
+.city-info h2{
+    font-size: 26pt;
+}
+
+.temp-select{
+    font-size: large;
+}
+
+.forcast{
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forcast-card{
+    background-color: lightgray;
+    width: 150px;
+    height: 250px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.forcast-card h3{
+    font-size: 20pt;
+}
+
+.forcast-card h4{
+    font-size: 16pt;
+}
+
+.weather-description{
+    font-size: 13pt;
+}
+
+.temperature{
+    width: 90%;
+    justify-content: space-between;
+}
+
+.high{
+    color: red;
+}
+
+.low{
+    color: blue;
+}
+
+.weather{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+}
+
+.cookie-notify{
+    margin: 0 auto;
+    width: 650px;
+    border: 2px solid black;
+    justify-content: space-around;
+    padding: 5px;
+    position: fixed;
+    bottom: 10px;
+}
+
+.msg-cookie{
+    width: 65%;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Forcast</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <!-- Container for all elements -->
+        <div class="container">
+            <!-- Navbar -->
+            <div class="navbar">
+                <h1 class="site-name">DojoWeather</h1>
+                <div class="nav-links">
+                    <ul class="city-links">
+                        <li>
+                            <a
+                                href="#"
+                                onclick="alert('Loading weather report...')"
+                                >Burbank</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                onclick="alert('Loading weather report...')"
+                                >Chicago</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="#"
+                                onclick="alert('Loading weather report...')"
+                                >Dallas</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Navbar -->
+            <!-- Core Content -->
+            <div class="content flex-column">
+                <div class="city-info flex-row">
+                    <h2>San Jose</h2>
+                    <div class="temp-select flex-row">
+                        <p>show temperature in&nbsp;</p>
+                        <select
+                            name="temp-format"
+                            id="temp-format"
+                            onchange="changeTempFormat(this)"
+                        >
+                            <option value="F">&#8457;</option>
+                            <option value="C">&#8451;</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- End City Info -->
+                <!-- Forcast -->
+                <div class="forcast flex-row">
+                    <div class="forcast-card flex-column" id="day0">
+                        <h3>Today</h3>
+                        <img
+                            src="images/some_rain.png"
+                            alt="rain"
+                            class="weather"
+                        >
+                        <p class="weather-description">some rain</p>
+                        <div class="temperature flex-row">
+                            <h4><span class="high">75</span>&deg;</h4>
+                            <h4><span class="low">65</span>&deg;</h4>
+                        </div>
+                    </div>
+                    <div class="forcast-card flex-column" id="day1">
+                        <h3>Tomorrow</h3>
+                        <img
+                            src="images/some_sun.png"
+                            alt="sunny"
+                            class="weather"
+                        >
+                        <p class="weather-description">some sun</p>
+                        <div class="temperature flex-row">
+                            <h4><span class="high">80</span>&deg;</h4>
+                            <h4><span class="low">66</span>&deg;</h4>
+                        </div>
+                    </div>
+                    <div class="forcast-card flex-column" id="day2">
+                        <h3>Friday</h3>
+                        <img
+                            src="images/some_clouds.png"
+                            alt="cloudy"
+                            class="weather"
+                        >
+                        <p class="weather-description">some clouds</p>
+                        <div class="temperature flex-row">
+                            <h4><span class="high">69</span>&deg;</h4>
+                            <h4><span class="low">61</span>&deg;</h4>
+                        </div>
+                    </div>
+                    <div class="forcast-card flex-column" id="day3">
+                        <h3>Saturday</h3>
+                        <img
+                            src="images/some_rain.png"
+                            alt="sunny"
+                            class="weather"
+                        >
+                        <p class="weather-description">some sun</p>
+                        <div class="temperature flex-row">
+                            <h4><span class="high">78</span>&deg;</h4>
+                            <h4><span class="low">70</span>&deg;</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Forcast -->
+            </div>
+            <!-- End Core Content -->
+            <!-- Cookie Notification -->
+            <div class="cookie-notify flex-row" id="cookie">
+                <img src="images/cookie.png" alt="cookie" class="cookie-img">
+                <div class="msg-cookie">
+                    <h4>Stop! Cookie Time</h4>
+                    <p class="txt">
+                        We use cookies (sadly not the edible ones) to
+                        personalize content and ads, to provide social media
+                        features and to analyse our traffic.
+                        <a href="#">Read more...</a>
+                    </p>
+                </div>
+                <button class="accept btn" onclick="closeCookie()">I Accept</button>
+            </div>
+            <!-- End Cookie -->
+        </div>
+    </body>
+</html>
